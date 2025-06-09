@@ -1,0 +1,120 @@
+$secondary-color: #f25f3a;
+$primary-color: #242d52;
+
+$text-color: #9095a7;
+$background-dark: #1d1e25;
+$background-soft-red: #ffefeb;
+$background-light: #fafafa;
+
+//  Typography
+$font: "Be Vietnam Pro", sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+
+body {
+  color: $primary-color;
+  font-family: $font;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  position: sticky;
+
+  background-position: top -8.5rem right -8.5rem, top 31rem right -8rem;
+
+  background-repeat: no-repeat;
+  background-size: 80%, 70%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.header-inner-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10.5rem;
+  padding: 1rem;
+}
+
+.header-img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 25% 75%;
+  position: absolute;
+  right: -28rem;
+  z-index: -1;
+}
+
+.header-logo {
+  padding: 0.5rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  font-size: $font-size-sm;
+  white-space: nowrap;
+}
+
+li {
+  font-size: 1rem;
+  color: $primary-color;
+  transition: color 0.3s ease;
+  font-size: $font-size-lg;
+  font-weight: 600;
+
+  &:hover {
+    color: $text-color;
+    cursor: pointer;
+  }
+}
+
+.button {
+  background-color: $secondary-color;
+  color: white;
+  border: none;
+  margin-left: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+  width: 100%;
+  max-width: 450px;
+  white-space: nowrap;
+  font-size: $font-size-lg;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.mobile-menu-button {
+  display: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+}

@@ -1,0 +1,72 @@
+$secondary-color: #f25f3a; 
+$primary-color: #242d52; 
+
+$text-color: #9095a7; 
+$background-dark: #1d1e25; 
+$background-soft-red: #ffefeb; 
+$background-light: #fafafa; 
+
+//  Typography
+$font: 'Be Vietnam Pro', sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+
+
+.about-section{
+    background-position: -25rem 0, 30rem 0;
+  background-repeat: no-repeat;
+  background-size: 50%, 70%;
+}
+.about-div{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.about-text-section{
+    max-width: 500px;
+
+  h1 {
+    color: $primary-color;
+    font-size: 2.8rem;
+    font-weight: 900;
+  }
+
+  p {
+    color: $text-color;
+    font-size: $font-size-lg;
+    line-height: 1.6;
+  }
+}
+
+.about-image-section{
+  max-width: 500px;
+  padding: 1rem;
+  flex: 1;
+}
+
+.image-section-span{
+  background-color: $secondary-color;
+  color: white;
+  padding: 0.6rem 0.8rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+  display: inline-block;
+  font-weight: bold;
+  font-size: $font-size-sm;
+}
+
+.image-section-p{
+ color: $text-color;
+  padding: 1rem 0;
+  font-size: $font-size-base;
+  line-height: 1.6;
+}

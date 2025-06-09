@@ -1,0 +1,45 @@
+$secondary-color: #f25f3a;
+$primary-color: #242d52;
+
+$text-color: #9095a7;
+$background-dark: #1d1e25;
+$background-soft-red: #ffefeb;
+$background-light: #fafafa;
+
+//  Typography
+$font: "Be Vietnam Pro", sans-serif;
+$font-size-base: 16px;
+$font-size-lg: 18px;
+$font-size-sm: 14px;
+
+.CTA-section {
+  background-color: $secondary-color;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-around;
+  background-image: url("../src/assets/bg-simplify-section-desktop.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 700px) {
+    background-image: url("../src/assets/bg-simplify-section-desktop.svg");
+    background-size: cover;
+  }
+
+  @media screen and (min-width: 1024px) {
+    background-image: url("../src/assets/bg-simplify-section-desktop.svg");
+
+    background-size: cover;
+    background-position: bottom 0rem left 13rem;
+  }
+}
+
+.CTA-section h1 {
+  color: $background-light;
+}
+
+.CTA-section button {
+  border: none;
+  color: $text-color;
+  border-radius: 10px;
+  padding: 0.4rem 2rem;
+}
