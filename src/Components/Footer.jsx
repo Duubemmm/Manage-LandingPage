@@ -25,12 +25,14 @@ const Footer = () => {
   ];
 
   const footerLinks = [
-    "About Us",
-    "Contact",
-    "Blog",
+    "Home",
     "Careers",
-    "Support",
+    "Pricing",
+    "Community",
+    "Products",
     "Privacy Policy",
+    "About Us"
+
   ];
 
   return (
@@ -65,8 +67,14 @@ const Footer = () => {
 
           {/* CTA Column */}
           <div className="footer-CTA">
-            <button>Get Started</button>
-
+            <div className="footer-CTA-email">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              aria-label="Email input"
+              className="footer-input"></input>
+            <button>Go</button>
+</div>
             <p>
               &copy; {new Date().getFullYear()} Manage. All rights reserved.
             </p>

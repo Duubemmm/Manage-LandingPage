@@ -64,6 +64,12 @@ $font-size-sm: 14px;
   font-size: $font-size-sm;
 }
 
+.image-section-title{
+  color: $primary-color;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
 .image-section-p{
  color: $text-color;
   padding: 1rem 0;

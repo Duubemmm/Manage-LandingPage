@@ -3,21 +3,21 @@ import "../Styles/About.scss";
 const About = () => {
   const Objectives = [
     {
-      id: 1,
+      id: "01",
       title: "Track company-wide progress",
       description:
         "See how your day-to-day tasks fit into the wider vision. Go from tracking progress at the milestone level all the way done to the smallest of details. Never lose sight of the bigger picture again.",
     },
 
     {
-      id: 2,
+      id: "02",
       title: "Advanced built-in reports",
       description:
         "Set internal delivery estimates and track progress toward company goals. Our customisable dashboard helps you build out the reports you need to keep key stakeholders informed.",
     },
 
     {
-      id: 3,
+      id: "03",
 
       title: "Everything you need in one place",
       description:
@@ -44,7 +44,7 @@ const About = () => {
             {Objectives.map((objective) => (
               <div key={objective.id}>
                 <span className="image-section-span">{objective.id}</span>
-                {objective.title}
+                <span className="image-section-title">{objective.title}</span>
                 <p className="image-section-p">{objective.description}</p>
               </div>
             ))}
