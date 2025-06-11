@@ -1,3 +1,4 @@
+import { useState} from "react";
 import Logo from "../assets/logo.svg";
 import TwitterLogo from "../assets/icon-twitter.svg";
 import PinterestLogo from "../assets/icon-pinterest.svg";
@@ -35,6 +36,22 @@ const Footer = () => {
 
   ];
 
+const EmailValidation = () => {
+  const [email, setEmail] = useState('');
+  const [isValid, setIsValid] = useState(false);
+
+  const validateEmail = (input) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email regex
+    return regex.test(input);
+  };
+
+  const handleChange = (e) => {
+    const input = e.target.value;
+    setEmail(input);
+    setIsValid(validateEmail(input));
+  };
+
+
   return (
     <footer>
       <div className="footer-div">
@@ -71,9 +88,15 @@ const Footer = () => {
             <input
               type="email"
               placeholder="Enter your email address"
+              value={email}
+              onChange={handleChange}
+              onKeyDown={EmailValidation}
+              style={{ border: isValid ? '2px solid green' : '2px solid red' }}
               aria-label="Email input"
-              className="footer-input"></input>
-            <button>Go</button>
+              className="footer-input"/>
+              {!isValid && email && <p style={{ color: 'red' }}>Please enter a valid email</p>}
+
+            <button disabled={!isValid}>Go</button>
 </div>
             <p>
               &copy; {new Date().getFullYear()} Manage. All rights reserved.
@@ -88,6 +111,7 @@ const Footer = () => {
       </div>
     </footer>
   );
+}
 };
 
 export default Footer;
