@@ -14,25 +14,32 @@ const Navbar = () => {
     { id: 5, name: "Community" },
   ];
 
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+    document.body.style.overflow = isMenuOpen ? "auto" : "hidden";
+  };
+
   return (
-    <header>
+    <header className="navbar">
       <div className="header-container">
         <div className="header-inner-container">
           <div className="header-logo">
             <img src={Logo} alt="logo" aria-label="Company's Logo" />
           </div>
 
-          {/* Desktop Menu */}
+          {/* Desktop Navigation */}
           <nav className="nav-links">
             <ul>
               {navLink.map((link) => (
-                <li key={link.id}>{link.name}</li>
+                <li key={link.id}>
+                  <a href="#">{link.name}</a>
+                </li>
               ))}
             </ul>
           </nav>
 
           {/* Desktop Button */}
-          <div>
+          <div className="desktop-button">
             <button className="button" aria-label="Get Started with Manage">
               Get Started
             </button>
@@ -44,7 +51,7 @@ const Navbar = () => {
             type="button"
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            onClick={toggleMenu}
             aria-label="Toggle menu"
           >
             {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
@@ -52,15 +59,19 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Dropdown */}
-        {isMenuOpen && (
-          <div id="mobile-menu" className="mobile-nav">
-            <ul>
-              {navLink.map((link) => (
-                <li key={link.id}>{link.name}</li>
-              ))}
-            </ul>
-          </div>
-        )}
+        <div 
+          id="mobile-menu" 
+          className={`mobile-nav ${isMenuOpen ? "open" : ""}`}
+        >
+          <ul>
+            {navLink.map((link) => (
+              <li key={link.id}>
+                <a href="#">{link.name}</a>
+              </li>
+            ))}
+          </ul>
+          <button className="mobile-nav-button" aria-label="Get Started with Manage">Get Started</button>
+        </div>
       </div>
     </header>
   );

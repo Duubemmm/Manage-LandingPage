@@ -7,7 +7,7 @@ const CTA = () => {
       </div>
 
       <div>
-        <button>Get Started</button>
+        <button aria-label="Get Started with Manage">Get Started</button>
       </div>
     </section>
   );

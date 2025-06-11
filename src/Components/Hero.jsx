@@ -20,6 +20,7 @@ const Hero = () => {
             src={IllustrationImage}
             alt="Illustration Image"
             aria-label="Illustration Image of Manage"
+            className="hero-image"
           />
         </div>
       </div>
